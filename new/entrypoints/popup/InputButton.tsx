@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./App.css";
+import "./content.css";
 import Logo from "../../assets/Vector.png";
 import Insert from "../../assets/Insert.png";
 import Refresh from "../../assets/Refresh.png";
@@ -53,8 +53,8 @@ const App: React.FC = () => {
   );
 
   return (
-    <div className="absolute right-[15px] bottom-[15px] bg-white w-10 h-10 rounded-full">
-      <div className="w-10 h-10 rounded-full bg-white border cursor-pointer">
+    <div className="absolute right-[15px] bottom-[15px] bg-red-950 w-10 h-10 rounded-full">
+      <div className="w-10 h-20 rounded-full bg-red-950 border cursor-pointer">
         <img
           className="align-middle items-center justify-center m-auto flex w-auto p-3 bg rounded-full"
           src={Logo}

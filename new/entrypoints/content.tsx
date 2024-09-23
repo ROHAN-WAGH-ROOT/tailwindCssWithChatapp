@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom/client";
-import App from "./popup/App";
-import "~/assets/tailwind.css";
+import InputButton from "./popup/InputButton";
+import "../entrypoints/popup/content.css";
 
 export default defineContentScript({
   matches: ["*://*/*"],
@@ -10,7 +10,12 @@ export default defineContentScript({
       // Create a new div inside the targetDiv to mount your React app
       const customDiv = document.createElement("div");
       customDiv.id = "custom-react-container"; // Ensure this ID is unique
+      const link = document.createElement('link');
+link.rel = 'stylesheet';
+link.href = 'https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css';
+document.head.appendChild(link);
 
+      
       // Apply inline styles to position the custom div
       customDiv.style.position = "absolute";
       customDiv.style.bottom = "35px";
@@ -35,7 +40,7 @@ export default defineContentScript({
 
       // Create a React root inside the newly appended div and render the App component
       const root = ReactDOM.createRoot(customDiv as HTMLElement);
-      root.render(<App />);
+      root.render(<InputButton />);
 
       return root;
     };
