@@ -1,14 +1,14 @@
-import { useState } from 'react';
-import reactLogo from '@/assets/react.svg';
-import wxtLogo from '/wxt.svg';
-import './content.css';
+import { useState } from "react";
+import reactLogo from "@/assets/react.svg";
+import wxtLogo from "/wxt.svg";
+import "./content.css";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <div className='flex'>
+      <div className="flex">
         <a href="https://wxt.dev" target="_blank">
           <img src={wxtLogo} className="logo" alt="WXT logo" />
         </a>

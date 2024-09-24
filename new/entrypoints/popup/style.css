@@ -40,6 +40,10 @@ h1 {
   line-height: 1.1;
 }
 
+.borders{
+  border: 1px solid #000 !important;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
