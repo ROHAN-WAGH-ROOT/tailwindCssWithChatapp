@@ -25,12 +25,9 @@ const Modal: React.FC<ModalProps> = ({
   setConversation,
   responseStatus,
   handleInsert,
-  // onClose,
   value,
   setValue,
   setResponseStatus,
-  // onChange,
-  // onSubmit,
 }) => {
   const ref = useRef<HTMLInputElement>(null);
 
@@ -73,7 +70,7 @@ const Modal: React.FC<ModalProps> = ({
     </div>
   );
 
-  if (!show) return null; // Don't render anything if not shown
+  if (!show) return null;
 
   return (
     <div
