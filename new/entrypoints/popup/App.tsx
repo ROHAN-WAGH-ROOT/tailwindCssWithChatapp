@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import ImageButton from "./InputButton"; // Adjust the path as necessary
-import Modal from "./Modal"; // Adjust the path as necessary
-
+import ImageButton from "./InputButton";
+import Modal from "./Modal";
 const App: React.FC = () => {
   type Conversation = {
     data: string;
@@ -12,7 +11,7 @@ const App: React.FC = () => {
   const [value, setValue] = useState<string>("");
   const [conversation, setConversation] = useState<Conversation[]>([]);
   const [responseStatus, setResponseStatus] = useState<boolean>(false);
-  const [isButtonVisible, setIsButtonVisible] = useState<boolean>(false); // State for button visibility
+  const [isButtonVisible, setIsButtonVisible] = useState<boolean>(false); 
 
   const replyMessage: string =
     "Thank you for the opportunity! If you have any more questions or if there's anything else I can help you with, feel free to ask.";
@@ -56,10 +55,6 @@ const App: React.FC = () => {
 
     setConversation([]);
     setValue("");
-  };
-
-  const handleSubmit = () => {
-    handleCloseModal();
   };
 
   useEffect(() => {
